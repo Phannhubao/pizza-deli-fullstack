@@ -28,8 +28,6 @@ Thumbs.db
 # ========================
 # Sensitive / Temp files
 # ========================
-*.docx
-*.pptx
 doc_extracted.txt
 test_categories.js
 
