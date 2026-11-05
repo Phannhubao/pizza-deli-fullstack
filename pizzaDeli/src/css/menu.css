@@ -1,0 +1,114 @@
+/* menu.css - Vintage Style */
+.menu1 {
+  padding: 40px 20px;
+  
+  border-top: 3px solid #c9a66b;
+  border-bottom: 3px solid #c9a66b;
+}
+
+.menu1 .row {
+  justify-content: center;
+}
+
+.menu1 .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.menu1 .col:hover {
+  transform: translateY(-5px);
+}
+
+.menu1 .menu-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  border: 3px solid #c9a66b; /* Gold border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  filter: sepia(30%) contrast(110%);
+}
+
+.menu1 .menu-icon:hover {
+  transform: scale(1.15);
+  filter: sepia(20%) contrast(120%);
+  border-color: #8b5a2b; /* Darker brown on hover */
+}
+
+.menu1 .menu-title-container {
+  background-color: #fff9f0; /* Cream background */
+  border: 2px solid #8b5a2b; /* Brown border */
+  border-radius: 5px;
+  width: 140px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 15px;
+  position: relative;
+  box-shadow: 3px 3px 0 rgba(139, 90, 43, 0.2);
+}
+
+/* Vintage paper effect for title */
+.menu1 .menu-title-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.menu1 .menu-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a3921; /* Dark brown */
+  margin: 0;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Underline effect */
+.menu1 .menu-title:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #c9a66b;
+  margin: 5px auto 0;
+  transition: width 0.3s ease;
+}
+
+.menu1 .col:hover .menu-title:after {
+  width: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu1 .col {
+    padding: 15px;
+  }
+  
+  .menu1 .menu-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .menu1 .menu-title-container {
+    width: 120px;
+    height: 40px;
+  }
+  
+  .menu1 .menu-title {
+    font-size: 16px;
+  }
+}

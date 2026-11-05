@@ -1,0 +1,8 @@
+/* App.css */
+.client-main-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  margin: 0;
+  padding: 0;
+  display: block;
+}

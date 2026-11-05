@@ -1,0 +1,162 @@
+/* Vintage Registration Page Styles */
+.vintage-register {
+  
+  color: #5a3921;
+  
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.vr-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff9f0;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: 1px solid #e0d5c3;
+}
+
+.vr-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #c9a66b;
+  padding-bottom: 20px;
+}
+
+.vr-title {
+  font-size: 2.2rem;
+  color: #8b5a2b;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 1px;
+}
+
+.vr-subtitle {
+  color: #7a6a5a;
+  font-style: italic;
+}
+
+.vr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vr-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vr-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5a3921;
+  font-weight: bold;
+}
+
+.vr-icon {
+  color: #c9a66b;
+  font-size: 1.1rem;
+}
+
+.vr-input {
+  padding: 12px 15px;
+  border: 1px solid #e0d5c3;
+  border-radius: 4px;
+  background: #f8f5f0;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #5a3921;
+  transition: all 0.3s;
+}
+
+.vr-input:focus {
+  outline: none;
+  border-color: #c9a66b;
+  box-shadow: 0 0 0 2px rgba(201, 166, 107, 0.3);
+}
+
+.vr-terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.vr-terms a {
+  color: #8b5a2b;
+  text-decoration: underline;
+}
+
+.vr-submit-btn {
+  background-color: #8b5a2b;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.vr-submit-btn:hover {
+  background-color: #6d4621;
+}
+
+.vr-login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.vr-login-link a {
+  color: #8b5a2b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Error styles */
+.vr-error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.vr-input.error {
+  border-color: #d32f2f;
+  background-color: #fff9f9;
+}
+
+/* Disabled button style */
+.vr-submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.vr-submit-btn.loading::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}

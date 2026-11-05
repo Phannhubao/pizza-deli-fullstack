@@ -1,0 +1,995 @@
+/* ==========================================================================
+   Pizza Deli - Modern Luxury Checkout Stylesheet
+   Theme: Warm Amber, Roasted Pizza Orange, Gold Accent & Slate Bistro
+   ========================================================================== */
+
+:root {
+  --chk-primary: #ea580c;
+  --chk-primary-hover: #c2410c;
+  --chk-accent: #f59e0b;
+  --chk-gold: #c9a66b;
+  --chk-dark: #0f172a;
+  --chk-slate: #1e293b;
+  --chk-muted: #64748b;
+  --chk-light-bg: #f8fafc;
+  --chk-card-bg: #ffffff;
+  --chk-border: #e2e8f0;
+  --chk-border-focus: #ea580c;
+  --chk-success: #10b981;
+  --chk-radius-sm: 8px;
+  --chk-radius-md: 14px;
+  --chk-radius-lg: 20px;
+  --chk-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --chk-shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+  --chk-gradient-primary: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+  --chk-gradient-hover: linear-gradient(135deg, #fbbf24 0%, #c2410c 100%);
+}
+
+.checkout-page {
+  background-color: var(--chk-light-bg);
+  min-height: calc(100vh - 80px);
+  padding: 36px 16px 60px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--chk-slate);
+}
+
+.checkout-main-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   1. Header Điều Hướng Thanh Toán
+   ========================================================================== */
+.checkout-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--chk-card-bg);
+  padding: 18px 28px;
+  border-radius: var(--chk-radius-md);
+  border: 1px solid var(--chk-border);
+  box-shadow: var(--chk-shadow-sm);
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.checkout-back-link {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkout-back-link:hover {
+  background: #e2e8f0;
+  color: var(--chk-primary);
+  transform: translateX(-3px);
+}
+
+.back-arrow-icon {
+  font-size: 0.85rem;
+  transition: transform 0.2s ease;
+}
+
+.checkout-back-link:hover .back-arrow-icon {
+  transform: translateX(-2px);
+}
+
+.checkout-header-title-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.checkout-heading {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--chk-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.02em;
+}
+
+.heading-icon {
+  color: var(--chk-primary);
+  font-size: 1.4rem;
+}
+
+.step-tag {
+  background: #fff7ed;
+  color: var(--chk-primary);
+  border: 1px solid #ffedd5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   2. Layout 2 Cột (Desktop Grid)
+   ========================================================================== */
+.checkout-two-columns-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 1024px) {
+  .checkout-two-columns-grid {
+    grid-template-columns: 1fr 440px;
+    align-items: start;
+  }
+}
+
+/* ==========================================================================
+   3. Cột Trái: Các Panel Điền Thông Tin
+   ========================================================================== */
+.checkout-forms-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.checkout-panel-card {
+  background: var(--chk-card-bg);
+  border-radius: var(--chk-radius-md);
+  border: 1px solid var(--chk-border);
+  box-shadow: var(--chk-shadow-sm);
+  padding: 26px;
+  transition: box-shadow 0.25s ease;
+}
+
+.checkout-panel-card:hover {
+  box-shadow: var(--chk-shadow-md);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+}
+
+.panel-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--chk-primary);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.panel-title {
+  margin: 0 0 2px 0;
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--chk-dark);
+  letter-spacing: -0.01em;
+}
+
+.panel-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--chk-muted);
+}
+
+.auto-fill-pill {
+  margin-left: auto;
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Form Fields */
+.form-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field-group.full-span {
+  grid-column: 1 / -1;
+}
+
+.field-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.field-label .req {
+  color: #ef4444;
+  font-weight: 900;
+}
+
+.field-label .opt {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: normal;
+}
+
+.field-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: var(--chk-radius-sm);
+  transition: all 0.25s ease;
+}
+
+.field-input-wrap:focus-within {
+  background: #ffffff;
+  border-color: var(--chk-border-focus);
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+}
+
+.field-icon {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.field-text-input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: var(--chk-dark);
+  font-weight: 600;
+  outline: none;
+}
+
+.field-text-input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.field-input-wrap.textarea-wrap {
+  padding: 0;
+}
+
+.field-text-area {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: var(--chk-dark);
+  font-weight: 500;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.field-text-area::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   4. Phương Thức Thanh Toán (Payment Cards)
+   ========================================================================== */
+.payment-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.payment-method-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.payment-method-card:hover {
+  border-color: var(--chk-accent);
+  background: #fffdfa;
+  transform: translateY(-1px);
+}
+
+.payment-method-card.is-selected {
+  border-color: var(--chk-primary);
+  background: #fffaf5;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.12);
+}
+
+.payment-card-radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.payment-card-radio input[type="radio"] {
+  display: none;
+}
+
+.custom-radio-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.payment-method-card.is-selected .custom-radio-check {
+  border-color: var(--chk-primary);
+  background: var(--chk-primary);
+}
+
+.payment-method-card.is-selected .custom-radio-check::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.payment-method-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.cod-icon-box {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.vnpay-icon-box {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.payment-method-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.payment-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--chk-dark);
+}
+
+.payment-desc {
+  font-size: 0.825rem;
+  color: var(--chk-muted);
+}
+
+.selected-check-badge {
+  color: var(--chk-primary);
+  font-size: 1.1rem;
+  margin-left: 8px;
+}
+
+/* ==========================================================================
+   5. Cột Phải: Tóm Tắt Đơn Hàng (Sticky Summary)
+   ========================================================================== */
+.checkout-summary-column {
+  position: relative;
+}
+
+.checkout-summary-card {
+  background: var(--chk-card-bg);
+  border-radius: var(--chk-radius-md);
+  border: 1px solid var(--chk-border);
+  box-shadow: var(--chk-shadow-md);
+  padding: 26px;
+  position: sticky;
+  top: 90px;
+}
+
+.checkout-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.summary-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--chk-dark);
+}
+
+.summary-badge {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Danh sách món ăn cuộn */
+.checkout-order-items-scroll {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.checkout-order-items-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.checkout-order-items-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.checkout-order-items-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.checkout-item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #f1f5f9;
+}
+
+.checkout-item-thumb {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e2e8f0;
+  flex-shrink: 0;
+}
+
+.checkout-item-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.checkout-qty-tag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-top-left-radius: 4px;
+}
+
+.checkout-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.checkout-item-name {
+  margin: 0;
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--chk-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.checkout-item-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.mini-option-pill {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #ffedd5;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+.checkout-item-unit-price {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.checkout-item-total {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--chk-primary);
+  white-space: nowrap;
+}
+
+/* Bảng tính chi phí */
+.checkout-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 16px;
+  margin-bottom: 22px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.925rem;
+}
+
+.breakdown-row .label {
+  color: #64748b;
+}
+
+.breakdown-row .value {
+  font-weight: 700;
+  color: var(--chk-dark);
+}
+
+.discount-highlight-row .label {
+  color: #047857;
+}
+
+.coupon-code-pill {
+  font-weight: 800;
+  color: #047857;
+}
+
+.discount-number {
+  color: #dc2626 !important;
+}
+
+.free-shipping-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.free-shipping-tag .old-fee {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.free-shipping-tag .free-text {
+  color: #059669;
+  font-weight: 800;
+}
+
+.fee-standard {
+  color: var(--chk-dark);
+}
+
+.breakdown-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 4px 0;
+}
+
+.total-pay-section {
+  align-items: flex-end;
+  margin-top: 4px;
+}
+
+.total-title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--chk-dark);
+}
+
+.vat-notice {
+  font-size: 0.725rem;
+  color: #94a3b8;
+}
+
+.final-total-price {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--chk-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Nút xác nhận đặt hàng */
+.confirm-order-action-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--chk-gradient-primary);
+  color: #ffffff;
+  padding: 16px 20px;
+  border-radius: var(--chk-radius-sm);
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 22px -3px rgba(234, 88, 12, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.confirm-order-action-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.8s ease;
+}
+
+.confirm-order-action-btn:hover:not(:disabled)::after {
+  left: 120%;
+}
+
+.confirm-order-action-btn:hover:not(:disabled) {
+  background: var(--chk-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -3px rgba(234, 88, 12, 0.45);
+}
+
+.confirm-order-action-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-final-price {
+  font-weight: 700;
+}
+
+.btn-arrow-right {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.confirm-order-action-btn:hover:not(:disabled) .btn-arrow-right {
+  transform: translateX(4px);
+}
+
+.spin-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Trust Box */
+.checkout-trust-box {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trust-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.trust-row .trust-icon {
+  color: var(--chk-accent);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. Màn Hình Đặt Hàng Thành Công (Order Success Card)
+   ========================================================================== */
+.checkout-success-card {
+  background: var(--chk-card-bg);
+  border-radius: var(--chk-radius-lg);
+  border: 1px solid var(--chk-border);
+  box-shadow: var(--chk-shadow-md);
+  padding: 50px 30px;
+  text-align: center;
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+.success-badge-circle {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #a7f3d0 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+  animation: popSuccess 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popSuccess {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-badge-icon {
+  font-size: 2.5rem;
+  color: #059669;
+}
+
+.success-main-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--chk-dark);
+  margin-bottom: 10px;
+}
+
+.success-sub-text {
+  font-size: 1rem;
+  color: var(--chk-muted);
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.voucher-savings-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.order-receipt-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--chk-radius-md);
+  padding: 22px 24px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.receipt-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--chk-dark);
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.receipt-icon {
+  color: var(--chk-primary);
+}
+
+.receipt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.925rem;
+}
+
+.receipt-label {
+  color: #64748b;
+  font-weight: 500;
+  min-width: 130px;
+}
+
+.receipt-value {
+  color: var(--chk-dark);
+  font-weight: 600;
+  text-align: right;
+}
+
+.receipt-code {
+  color: var(--chk-primary);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.receipt-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 6px 0;
+}
+
+.total-receipt-row {
+  align-items: center;
+  margin-top: 4px;
+}
+
+.receipt-total-highlight {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--chk-primary);
+}
+
+.success-action-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-home-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cta-home-btn:hover {
+  background: #e2e8f0;
+  color: var(--chk-dark);
+}
+
+.cta-profile-btn {
+  background: var(--chk-gradient-primary);
+  border: none;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.3);
+  transition: all 0.25s ease;
+}
+
+.cta-profile-btn:hover {
+  background: var(--chk-gradient-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.4);
+}
+
+/* ==========================================================================
+   7. Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 768px) {
+  .checkout-page {
+    padding: 20px 12px 40px 12px;
+  }
+
+  .checkout-header-bar {
+    padding: 16px;
+  }
+
+  .checkout-heading {
+    font-size: 1.3rem;
+  }
+
+  .form-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-panel-card {
+    padding: 20px 16px;
+  }
+
+  .checkout-summary-card {
+    position: static;
+    padding: 20px 16px;
+  }
+
+  .payment-method-card {
+    padding: 14px;
+  }
+
+  .receipt-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .receipt-value {
+    text-align: left;
+  }
+}

@@ -1,0 +1,542 @@
+/* AboutModern.css - Luxury Italian Bistro About Page */
+
+.about-page-wrapper {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding-bottom: 60px;
+}
+
+/* ==================== HERO SECTION ==================== */
+.about-hero {
+  position: relative;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background-size: cover;
+  background-position: center;
+  padding: 105px 20px 85px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 100%;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-hero-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  color: #f59e0b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.about-hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.about-hero-title span {
+  background: linear-gradient(135deg, #fbbf24 0%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-hero-desc {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ==================== STATS SECTION ==================== */
+.about-stats-container {
+  max-width: 1140px;
+  margin: -45px auto 70px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about-stat-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(234, 88, 12, 0.15);
+  border-color: #fdba74;
+}
+
+.about-stat-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ea580c;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.about-stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ==================== STORY SECTION ==================== */
+.about-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-story-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.about-section-tag {
+  color: #ea580c;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.about-section-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.about-story-text p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.about-quote-box {
+  border-left: 4px solid #ea580c;
+  background: #fff7ed;
+  padding: 20px 24px;
+  border-radius: 0 14px 14px 0;
+  margin: 28px 0;
+}
+
+.about-quote-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #9a3412;
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.about-quote-author {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #c2410c;
+}
+
+.about-story-image-wrap {
+  position: relative;
+}
+
+.about-main-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+.about-floating-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 280px;
+}
+
+.about-floating-icon {
+  font-size: 2rem;
+  color: #f59e0b;
+  flex-shrink: 0;
+}
+
+.about-floating-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.about-floating-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* ==================== 4 PILLARS OF CRAFT ==================== */
+.about-craft-section {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 60px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 90px;
+  border: 1px solid #e2e8f0;
+}
+
+.about-center-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.about-craft-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.about-craft-card {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 30px 22px;
+  position: relative;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-craft-card:hover {
+  background: #ffffff;
+  transform: translateY(-8px);
+  border-color: #fdba74;
+  box-shadow: 0 15px 30px rgba(234, 88, 12, 0.12);
+}
+
+.about-craft-step {
+  width: 36px;
+  height: 36px;
+  background: #ea580c;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.35);
+}
+
+.about-craft-icon {
+  font-size: 2.2rem;
+  color: #f59e0b;
+  margin-bottom: 16px;
+}
+
+.about-craft-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.about-craft-desc {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==================== TEAM SECTION ==================== */
+.about-team-section {
+  margin-bottom: 90px;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.about-member-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+.about-member-img-wrap {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.about-member-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-member-card:hover .about-member-img {
+  transform: scale(1.06);
+}
+
+.about-member-role-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #f59e0b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.about-member-info {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-member-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.about-member-subtitle {
+  font-size: 0.9rem;
+  color: #ea580c;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.about-member-bio {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.about-member-quote {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #334155;
+  background: #f1f5f9;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin: 0;
+  border-left: 3px solid #cbd5e1;
+}
+
+/* ==================== CTA BANNER ==================== */
+.about-cta-card {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 24px;
+  padding: 50px 40px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.about-cta-content h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.about-cta-content p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.about-cta-actions {
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.about-btn-primary {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.35);
+}
+
+.about-btn-primary:hover {
+  background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(234, 88, 12, 0.45);
+}
+
+.about-btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.about-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-story-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-floating-badge {
+    position: static;
+    margin-top: 15px;
+    max-width: 100%;
+  }
+
+  .about-craft-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-btn-primary, .about-btn-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero-title {
+    font-size: 2rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-craft-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-craft-section {
+    padding: 35px 20px;
+  }
+}

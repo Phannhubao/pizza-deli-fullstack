@@ -1,0 +1,180 @@
+/* Vintage About Page Styles */
+.vintage-about {
+
+  color: #5a3921;
+ 
+}
+
+.va-hero {
+
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-bottom: 3px solid #c9a66b;
+}
+
+.va-hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.va-title {
+  font-size: 3.5rem;
+  color: #5a3921;
+  margin-bottom: 1rem;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.va-subtitle {
+  font-size: 1.5rem;
+  color: #c9a66b;
+  font-style: italic;
+}
+
+.va-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.va-section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #e0d5c3;
+  padding-bottom: 15px;
+}
+
+.va-section-icon {
+  font-size: 2rem;
+  color: #8b5a2b;
+  margin-right: 15px;
+}
+
+.va-section-title {
+  font-size: 2rem;
+  font-family: 'Times New Roman', serif;
+  color: #5a3921;
+  letter-spacing: 1px;
+}
+
+/* Timeline Styles */
+.va-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.va-timeline:before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #c9a66b;
+}
+
+.va-timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.va-timeline-year {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: #8b5a2b;
+  color: #f8f5f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 3px solid #c9a66b;
+}
+
+.va-timeline-content {
+  background: #fff9f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-left: 3px solid #c9a66b;
+}
+
+.va-timeline-content h3 {
+  color: #8b5a2b;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+/* Values Section */
+.va-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.va-value-card {
+  background: #fff9f0;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-top: 3px solid #c9a66b;
+}
+
+.va-value-card h3 {
+  color: #8b5a2b;
+  font-size: 1.5rem;
+  margin-top: 0;
+  border-bottom: 1px dashed #c9a66b;
+  padding-bottom: 10px;
+}
+
+/* Team Section */
+.va-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.va-team-member {
+  text-align: center;
+  background: #fff9f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.va-member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #c9a66b;
+}
+
+.va-team-member h3 {
+  color: #8b5a2b;
+  margin-bottom: 5px;
+}
+
+.va-team-member p {
+  color: #7a6a5a;
+  font-style: italic;
+}
+

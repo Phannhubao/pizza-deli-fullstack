@@ -1,0 +1,165 @@
+/* Vintage Contact Page Styles */
+.vintage-contact {
+  
+  color: #5a3921;
+  
+}
+
+/* Hero Section */
+.vc-hero {
+ 
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #5a3921;
+  border-bottom: 3px solid #c9a66b;
+}
+
+.vc-hero-title {
+  font-size: 3rem;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.vc-hero-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #c9a66b;
+}
+
+/* Main Container */
+.vc-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.vc-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .vc-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Contact Info Column */
+.vc-info-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.vc-info-card {
+  background: #fff9f0;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-left: 3px solid #c9a66b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.vc-icon {
+  font-size: 2rem;
+  color: #8b5a2b;
+  margin-bottom: 15px;
+}
+
+.vc-info-card h3 {
+  color: #8b5a2b;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Contact Form Column */
+.vc-form-col {
+  background: #fff9f0;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-top: 3px solid #c9a66b;
+}
+
+.vc-form-title {
+  font-size: 1.8rem;
+  color: #8b5a2b;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+}
+
+.vc-form-group {
+  margin-bottom: 20px;
+}
+
+.vc-input, .vc-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0d5c3;
+  border-radius: 4px;
+  background: #f8f5f0;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #5a3921;
+  transition: all 0.3s;
+}
+
+.vc-input:focus, .vc-textarea:focus {
+  outline: none;
+  border-color: #c9a66b;
+  box-shadow: 0 0 0 2px rgba(201, 166, 107, 0.3);
+}
+
+.vc-textarea {
+  resize: vertical;
+}
+
+.vc-submit-btn {
+  background-color: #8b5a2b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  transition: background-color 0.3s;
+  font-family: 'Times New Roman', serif;
+}
+
+.vc-submit-btn:hover {
+  background-color: #6d4621;
+}
+
+/* Map Section */
+.vc-map-container {
+  width: 100%;
+  padding: 20px;
+  
+  border-top: 3px solid #c9a66b;
+}
+
+.vc-map {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}

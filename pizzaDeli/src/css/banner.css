@@ -1,0 +1,10 @@
+.carousel-item img {
+  width: 100%; /* Đặt chiều rộng của hình ảnh là 100% */
+  height: auto; /* Để chiều cao tự động, giữ tỷ lệ khung hình */
+  object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung mà không bị biến dạng */
+}
+
+.carousel {
+  max-height: 600px; /* Đặt chiều cao tối đa cho carousel */
+  overflow: hidden; /* Ẩn phần hình ảnh vượt quá chiều cao */
+}

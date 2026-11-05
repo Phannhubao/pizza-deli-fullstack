@@ -1,0 +1,40 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+.my-card-style {
+  padding: 0 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.height-20 {
+  height: 37px !important;
+}
+
+
+.height-30 {
+  height: 40px !important;
+}
+
+.height-40 {
+  height: 56px !important;
+}
+
+
+
+.cursor-pointer {
+  cursor: pointer;
+
+} */

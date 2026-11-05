@@ -1,0 +1,305 @@
+/* Modern SaaS Admin Order Management Stylesheet */
+
+.order-manager-pro-container {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1e293b;
+}
+
+/* Hero Section */
+.admin-page-hero {
+  background: white;
+  padding: 1.5rem 1.75rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.admin-hero-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.admin-hero-subtitle {
+  font-size: 0.9rem;
+}
+
+/* KPI Cards */
+.kpi-card {
+  background: white;
+  padding: 1.25rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+.kpi-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.kpi-data {
+  overflow: hidden;
+}
+
+.kpi-label {
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #64748b;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.kpi-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+/* Accent Colors */
+.bg-warning-subtle { background-color: #fef3c7 !important; }
+.bg-primary-subtle { background-color: #e0e7ff !important; }
+.bg-success-subtle { background-color: #dcfce7 !important; }
+.bg-danger-subtle  { background-color: #fee2e2 !important; }
+.bg-gold-subtle    { background-color: #fef9c3 !important; }
+.text-gold         { color: #b45309 !important; }
+
+/* Admin Base Card */
+.admin-card {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Status Filter Tabs */
+.status-tabs-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 0.5rem 0.75rem 0;
+  gap: 0.5rem;
+  background: white;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.status-tab-btn {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-tab-btn:hover {
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+.status-tab-btn.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  background-color: #f8fafc;
+}
+
+.tab-counter {
+  background-color: #e2e8f0;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  transition: background-color 0.2s ease;
+}
+
+.status-tab-btn.active .tab-counter {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Search Box Pro */
+.search-box-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 0.95rem;
+}
+
+.search-input-pro {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.search-input-pro:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 8px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.filter-select-pro {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.85rem;
+}
+
+/* Professional Table */
+.pro-order-table {
+  font-size: 0.9rem;
+}
+
+.table-head-pro th {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 0.85rem;
+  border: none;
+}
+
+.order-row-pro {
+  transition: background-color 0.15s ease;
+}
+
+.order-row-pro:hover {
+  background-color: #f1f5f9 !important;
+}
+
+.order-row-pro td {
+  padding: 1rem 0.85rem;
+  border-color: #f1f5f9;
+}
+
+/* Badges */
+.order-id-badge {
+  font-weight: 700;
+  color: #1e40af;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.payment-badge {
+  font-size: 0.775rem;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.payment-online {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.payment-cod {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.custom-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.badge-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-processing {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+}
+
+.badge-completed {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.badge-cancelled {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.badge-default {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.status-select-quick {
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: white;
+  cursor: pointer;
+}
+
+.status-select-quick:focus {
+  border-color: #3b82f6;
+}
+
+/* Modal Custom Styling */
+.admin-order-modal .modal-content {
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Empty state */
+.empty-orders-state {
+  color: #94a3b8;
+}

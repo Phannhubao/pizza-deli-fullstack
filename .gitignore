@@ -1,0 +1,39 @@
+# ========================
+# BACKEND - Spring Boot
+# ========================
+DELI_API/target/
+DELI_API/.mvn/wrapper/maven-wrapper.jar
+DELI_API/*.log
+DELI_API/logs/
+
+# ========================
+# FRONTEND - React / Node
+# ========================
+pizzaDeli/node_modules/
+pizzaDeli/build/
+pizzaDeli/.env
+pizzaDeli/.env.local
+pizzaDeli/.env.production
+
+# ========================
+# IDE & OS
+# ========================
+.vscode/settings.json
+.idea/
+*.iml
+*.class
+.DS_Store
+Thumbs.db
+
+# ========================
+# Sensitive / Temp files
+# ========================
+*.docx
+*.pptx
+doc_extracted.txt
+test_categories.js
+
+# ========================
+# Secret config files
+# ========================
+DELI_API/src/main/resources/application.properties

@@ -1,0 +1,269 @@
+.dashboard-main {
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 70px);
+}
+
+.dashboard-header {
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-header h4 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-header p {
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+/* Stat Cards */
+.stat-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card .card-body {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.stat-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 0.2;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #2c3e50;
+}
+
+.stat-card .card-footer {
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1.5rem;
+}
+
+.stat-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.stat-link:hover {
+  color: #2c3e50;
+}
+
+/* Card Background Variants */
+.revenue-card {
+  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+  color: white;
+}
+
+.revenue-card .stat-title,
+.revenue-card .stat-value,
+.revenue-card .stat-link {
+  color: white !important;
+}
+
+.revenue-card .stat-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.categories-card {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: white;
+}
+
+.categories-card .stat-title,
+.categories-card .stat-value,
+.categories-card .stat-link {
+  color: white !important;
+}
+
+.categories-card .stat-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.products-card {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: white;
+}
+
+.products-card .stat-title,
+.products-card .stat-value,
+.products-card .stat-link {
+  color: white !important;
+}
+
+.products-card .stat-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Chart Section */
+.chart-section {
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.chart-header {
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  color: #2c3e50;
+  padding: 1rem 1.5rem;
+}
+
+.chart-body {
+  padding: 1rem;
+}
+
+/* Data Table Section */
+.data-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.data-header {
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  color: #2c3e50;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-all-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.view-all-link:hover {
+  color: #4e54c8;
+}
+
+.data-table {
+  margin-bottom: 0;
+}
+
+.data-table thead th {
+  background-color: #f8f9fa;
+  border-top: none;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  color: #2c3e50;
+  padding: 1rem 0.75rem;
+}
+
+.data-table tbody td {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+}
+
+.id-badge {
+  background: #f0f3f8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.product-info .product-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.product-info .product-id {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* No data state */
+.no-data {
+  padding: 2rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+.no-data i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-data p {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .data-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .chart-section .col-lg-5,
+  .chart-section .col-lg-7 {
+    margin-bottom: 1rem;
+  }
+}
+.pagination button {
+  min-width: 40px;
+  border-radius: 8px;
+}
+.pagination .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
